@@ -1,0 +1,1103 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE Ontology [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/sara/ontologies/2015/10/untitled-ontology-4"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.semanticweb.org/sara/ontologies/2015/10/untitled-ontology-4">
+    <Prefix name="" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#AnderesMedium"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Broschüre"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Buch"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Datenträger"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ElektronischesMedium"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Medium"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MonitoringKomponente"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Person"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PersonenGruppe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhysischesMedium"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#System"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Zeitschrift"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#AdministrationAusführen"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#AuskunftÜberMedienstatusGebenAn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#AusleiheVerlängern"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#GruppeErstellen"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#GruppeLöschen"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#GruppenVerwalten"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#GruppeÄndern"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#MedienVerwalten"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#MediumAusleihen"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#MediumBearbeiten"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#MediumHinzufügen"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#MediumLöschen"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#MediumVorbestellen"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#MediumZurückgeben"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#NutzerBearbeiten"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#NutzerErstellen"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#NutzerInGruppenEingliedern"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#NutzerLöschen"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#NutzerdatenBearbeiten"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#SucheAusführen"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#SucheÜberInhaltAusführen"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#SucheÜberMetadatenAusführen"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#automatischeMahnungVerschickenAn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#automatischeWarnungVerschickenAn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#gehörtZuGruppe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hatAusgeliehen"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#kannAusleihen"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#physischesMediumEntspricht"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#überUserInterfaceVerwalten"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hatAusleihLevel"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hatAusleihdatum"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hatAusleihzeitpunkt"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hatIdentifier"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hatRückgabedatum"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hatStückzahl"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#kannGruppeHinzufügen"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#kannGruppeLöschen"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#kannGruppeÄndern"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#kannMediumHinzufügen"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#kannMediumLöschen"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#kannMediumÄndern"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#kannPersonHinzufügen"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#kannPersonLöschen"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#kannPersonZuGruppeHinzufügen"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#kannPersonÄndern"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#wurdenVerliehen"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#wurdenVorbestellt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Administratorengruppe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ausleihgruppe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Axel_Ausleihmann"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Lehrbuch_A"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Lehrbuch_B"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Lehrbuch_B_echt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SWT_Paper.pdf"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Valentin_Vorbesteller"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#VerzugMonitor"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#AnderesMedium"/>
+        <Class IRI="#Medium"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Broschüre"/>
+        <Class IRI="#Medium"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Buch"/>
+        <Class IRI="#Medium"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Datenträger"/>
+        <Class IRI="#Medium"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ElektronischesMedium"/>
+        <Class IRI="#Medium"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MonitoringKomponente"/>
+        <Class IRI="#System"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Zeitschrift"/>
+        <Class IRI="#Medium"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#AnderesMedium"/>
+        <Class IRI="#Broschüre"/>
+        <Class IRI="#Buch"/>
+        <Class IRI="#Datenträger"/>
+        <Class IRI="#ElektronischesMedium"/>
+        <Class IRI="#Zeitschrift"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Medium"/>
+        <Class IRI="#Person"/>
+        <Class IRI="#PersonenGruppe"/>
+        <Class IRI="#System"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#PersonenGruppe"/>
+        <NamedIndividual IRI="#Administratorengruppe"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PersonenGruppe"/>
+        <NamedIndividual IRI="#Ausleihgruppe"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#Axel_Ausleihmann"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Buch"/>
+        <NamedIndividual IRI="#Lehrbuch_A"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#hatStückzahl"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+        <NamedIndividual IRI="#Lehrbuch_A"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Buch"/>
+        <NamedIndividual IRI="#Lehrbuch_B"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PhysischesMedium"/>
+        <NamedIndividual IRI="#Lehrbuch_B_echt"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ElektronischesMedium"/>
+        <NamedIndividual IRI="#SWT_Paper.pdf"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Person"/>
+        <NamedIndividual IRI="#Valentin_Vorbesteller"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MonitoringKomponente"/>
+        <NamedIndividual IRI="#VerzugMonitor"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Administratorengruppe"/>
+        <NamedIndividual IRI="#Ausleihgruppe"/>
+        <NamedIndividual IRI="#Axel_Ausleihmann"/>
+        <NamedIndividual IRI="#Lehrbuch_A"/>
+        <NamedIndividual IRI="#Lehrbuch_B"/>
+        <NamedIndividual IRI="#Lehrbuch_B_echt"/>
+        <NamedIndividual IRI="#SWT_Paper.pdf"/>
+        <NamedIndividual IRI="#Valentin_Vorbesteller"/>
+        <NamedIndividual IRI="#VerzugMonitor"/>
+    </DifferentIndividuals>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Administratorengruppe"/>
+        <NamedIndividual IRI="#Ausleihgruppe"/>
+        <NamedIndividual IRI="#Lehrbuch_A"/>
+        <NamedIndividual IRI="#Lehrbuch_B"/>
+        <NamedIndividual IRI="#SWT_Paper.pdf"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#GruppeErstellen"/>
+        <NamedIndividual IRI="#Administratorengruppe"/>
+        <NamedIndividual IRI="#Ausleihgruppe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MediumBearbeiten"/>
+        <NamedIndividual IRI="#Administratorengruppe"/>
+        <NamedIndividual IRI="#SWT_Paper.pdf"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MediumBearbeiten"/>
+        <NamedIndividual IRI="#Administratorengruppe"/>
+        <NamedIndividual IRI="#Lehrbuch_A"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MediumBearbeiten"/>
+        <NamedIndividual IRI="#Administratorengruppe"/>
+        <NamedIndividual IRI="#Lehrbuch_B"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MediumHinzufügen"/>
+        <NamedIndividual IRI="#Administratorengruppe"/>
+        <NamedIndividual IRI="#SWT_Paper.pdf"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MediumHinzufügen"/>
+        <NamedIndividual IRI="#Administratorengruppe"/>
+        <NamedIndividual IRI="#Lehrbuch_A"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MediumHinzufügen"/>
+        <NamedIndividual IRI="#Administratorengruppe"/>
+        <NamedIndividual IRI="#Lehrbuch_B"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MediumLöschen"/>
+        <NamedIndividual IRI="#Administratorengruppe"/>
+        <NamedIndividual IRI="#SWT_Paper.pdf"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MediumLöschen"/>
+        <NamedIndividual IRI="#Administratorengruppe"/>
+        <NamedIndividual IRI="#Lehrbuch_A"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MediumLöschen"/>
+        <NamedIndividual IRI="#Administratorengruppe"/>
+        <NamedIndividual IRI="#Lehrbuch_B"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#AusleiheVerlängern"/>
+        <NamedIndividual IRI="#Ausleihgruppe"/>
+        <NamedIndividual IRI="#Lehrbuch_A"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MediumAusleihen"/>
+        <NamedIndividual IRI="#Ausleihgruppe"/>
+        <NamedIndividual IRI="#Lehrbuch_A"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MediumVorbestellen"/>
+        <NamedIndividual IRI="#Ausleihgruppe"/>
+        <NamedIndividual IRI="#Lehrbuch_B"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#gehörtZuGruppe"/>
+        <NamedIndividual IRI="#Axel_Ausleihmann"/>
+        <NamedIndividual IRI="#Ausleihgruppe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#physischesMediumEntspricht"/>
+        <NamedIndividual IRI="#Lehrbuch_B_echt"/>
+        <NamedIndividual IRI="#Lehrbuch_B"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#gehörtZuGruppe"/>
+        <NamedIndividual IRI="#Valentin_Vorbesteller"/>
+        <NamedIndividual IRI="#Administratorengruppe"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#AuskunftÜberMedienstatusGebenAn"/>
+        <NamedIndividual IRI="#VerzugMonitor"/>
+        <NamedIndividual IRI="#Axel_Ausleihmann"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#AuskunftÜberMedienstatusGebenAn"/>
+        <NamedIndividual IRI="#VerzugMonitor"/>
+        <NamedIndividual IRI="#Valentin_Vorbesteller"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#automatischeMahnungVerschickenAn"/>
+        <NamedIndividual IRI="#VerzugMonitor"/>
+        <NamedIndividual IRI="#Axel_Ausleihmann"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#automatischeMahnungVerschickenAn"/>
+        <NamedIndividual IRI="#VerzugMonitor"/>
+        <NamedIndividual IRI="#Valentin_Vorbesteller"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#automatischeWarnungVerschickenAn"/>
+        <NamedIndividual IRI="#VerzugMonitor"/>
+        <NamedIndividual IRI="#Axel_Ausleihmann"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#automatischeWarnungVerschickenAn"/>
+        <NamedIndividual IRI="#VerzugMonitor"/>
+        <NamedIndividual IRI="#Valentin_Vorbesteller"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hatAusleihLevel"/>
+        <NamedIndividual IRI="#Administratorengruppe"/>
+        <Literal datatypeIRI="&xsd;int">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#kannGruppeHinzufügen"/>
+        <NamedIndividual IRI="#Administratorengruppe"/>
+        <Literal datatypeIRI="&xsd;int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#kannGruppeLöschen"/>
+        <NamedIndividual IRI="#Administratorengruppe"/>
+        <Literal datatypeIRI="&xsd;int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#kannGruppeÄndern"/>
+        <NamedIndividual IRI="#Administratorengruppe"/>
+        <Literal datatypeIRI="&xsd;int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#kannMediumHinzufügen"/>
+        <NamedIndividual IRI="#Administratorengruppe"/>
+        <Literal datatypeIRI="&xsd;int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#kannMediumLöschen"/>
+        <NamedIndividual IRI="#Administratorengruppe"/>
+        <Literal datatypeIRI="&xsd;int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#kannMediumÄndern"/>
+        <NamedIndividual IRI="#Administratorengruppe"/>
+        <Literal datatypeIRI="&xsd;int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#kannPersonHinzufügen"/>
+        <NamedIndividual IRI="#Administratorengruppe"/>
+        <Literal datatypeIRI="&xsd;int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#kannPersonLöschen"/>
+        <NamedIndividual IRI="#Administratorengruppe"/>
+        <Literal datatypeIRI="&xsd;int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#kannPersonÄndern"/>
+        <NamedIndividual IRI="#Administratorengruppe"/>
+        <Literal datatypeIRI="&xsd;int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hatAusleihLevel"/>
+        <NamedIndividual IRI="#Ausleihgruppe"/>
+        <Literal datatypeIRI="&xsd;int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hatAusleihLevel"/>
+        <NamedIndividual IRI="#Lehrbuch_A"/>
+        <Literal datatypeIRI="&xsd;int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hatStückzahl"/>
+        <NamedIndividual IRI="#Lehrbuch_A"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#wurdenVerliehen"/>
+        <NamedIndividual IRI="#Lehrbuch_A"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#wurdenVorbestellt"/>
+        <NamedIndividual IRI="#Lehrbuch_A"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hatAusleihLevel"/>
+        <NamedIndividual IRI="#Lehrbuch_B"/>
+        <Literal datatypeIRI="&xsd;int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hatStückzahl"/>
+        <NamedIndividual IRI="#Lehrbuch_B"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#wurdenVerliehen"/>
+        <NamedIndividual IRI="#Lehrbuch_B"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#wurdenVorbestellt"/>
+        <NamedIndividual IRI="#Lehrbuch_B"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hatAusleihLevel"/>
+        <NamedIndividual IRI="#Lehrbuch_B_echt"/>
+        <Literal datatypeIRI="&xsd;int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hatAusleihdatum"/>
+        <NamedIndividual IRI="#Lehrbuch_B_echt"/>
+        <Literal datatypeIRI="&xsd;dateTime">30.11.2015</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hatRückgabedatum"/>
+        <NamedIndividual IRI="#Lehrbuch_B_echt"/>
+        <Literal datatypeIRI="&xsd;dateTime">6.12.2015</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hatAusleihLevel"/>
+        <NamedIndividual IRI="#SWT_Paper.pdf"/>
+        <Literal datatypeIRI="&xsd;int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hatStückzahl"/>
+        <NamedIndividual IRI="#SWT_Paper.pdf"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">1000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#wurdenVerliehen"/>
+        <NamedIndividual IRI="#SWT_Paper.pdf"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">10</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#AdministrationAusführen"/>
+        <ObjectProperty IRI="#überUserInterfaceVerwalten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#AuskunftÜberMedienstatusGebenAn"/>
+        <ObjectProperty IRI="#überUserInterfaceVerwalten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#AusleiheVerlängern"/>
+        <ObjectProperty IRI="#MediumAusleihen"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#GruppeErstellen"/>
+        <ObjectProperty IRI="#GruppenVerwalten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#GruppeLöschen"/>
+        <ObjectProperty IRI="#GruppenVerwalten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#GruppenVerwalten"/>
+        <ObjectProperty IRI="#AdministrationAusführen"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#GruppeÄndern"/>
+        <ObjectProperty IRI="#GruppenVerwalten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#MedienVerwalten"/>
+        <ObjectProperty IRI="#AdministrationAusführen"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#MediumAusleihen"/>
+        <ObjectProperty IRI="#überUserInterfaceVerwalten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#MediumBearbeiten"/>
+        <ObjectProperty IRI="#MedienVerwalten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#MediumHinzufügen"/>
+        <ObjectProperty IRI="#MedienVerwalten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#MediumLöschen"/>
+        <ObjectProperty IRI="#MedienVerwalten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#MediumVorbestellen"/>
+        <ObjectProperty IRI="#überUserInterfaceVerwalten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#MediumZurückgeben"/>
+        <ObjectProperty IRI="#überUserInterfaceVerwalten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#NutzerBearbeiten"/>
+        <ObjectProperty IRI="#NutzerdatenBearbeiten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#NutzerErstellen"/>
+        <ObjectProperty IRI="#NutzerdatenBearbeiten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#NutzerInGruppenEingliedern"/>
+        <ObjectProperty IRI="#GruppenVerwalten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#NutzerLöschen"/>
+        <ObjectProperty IRI="#NutzerdatenBearbeiten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#NutzerdatenBearbeiten"/>
+        <ObjectProperty IRI="#AdministrationAusführen"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#SucheAusführen"/>
+        <ObjectProperty IRI="#überUserInterfaceVerwalten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#SucheÜberInhaltAusführen"/>
+        <ObjectProperty IRI="#SucheAusführen"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#SucheÜberMetadatenAusführen"/>
+        <ObjectProperty IRI="#SucheAusführen"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#automatischeMahnungVerschickenAn"/>
+        <ObjectProperty IRI="#überUserInterfaceVerwalten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#automatischeWarnungVerschickenAn"/>
+        <ObjectProperty IRI="#überUserInterfaceVerwalten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#hatAusgeliehen"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#physischesMediumEntspricht"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#MediumZurückgeben"/>
+        <ObjectProperty IRI="#MediumAusleihen"/>
+    </InverseObjectProperties>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#physischesMediumEntspricht"/>
+    </SymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#AuskunftÜberMedienstatusGebenAn"/>
+        <Class IRI="#MonitoringKomponente"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#AusleiheVerlängern"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#GruppeErstellen"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#kannGruppeHinzufügen"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#GruppeLöschen"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#kannGruppeLöschen"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#GruppenVerwalten"/>
+        <Class IRI="#PersonenGruppe"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#GruppeÄndern"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#kannGruppeÄndern"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#MedienVerwalten"/>
+        <Class IRI="#PersonenGruppe"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#MediumAusleihen"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#MediumBearbeiten"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#kannMediumÄndern"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#MediumHinzufügen"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#kannMediumHinzufügen"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#MediumLöschen"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#kannMediumLöschen"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#MediumVorbestellen"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#MediumZurückgeben"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#NutzerBearbeiten"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#kannPersonÄndern"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#NutzerErstellen"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#kannPersonHinzufügen"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#NutzerInGruppenEingliedern"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#kannPersonZuGruppeHinzufügen"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#NutzerLöschen"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#kannPersonLöschen"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#automatischeMahnungVerschickenAn"/>
+        <Class IRI="#MonitoringKomponente"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#automatischeWarnungVerschickenAn"/>
+        <Class IRI="#MonitoringKomponente"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#gehörtZuGruppe"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hatAusgeliehen"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#physischesMediumEntspricht"/>
+        <Class IRI="#PhysischesMedium"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#AuskunftÜberMedienstatusGebenAn"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#AusleiheVerlängern"/>
+        <Class IRI="#Medium"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#AusleiheVerlängern"/>
+        <Class IRI="#PhysischesMedium"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#GruppeErstellen"/>
+        <Class IRI="#PersonenGruppe"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#GruppeLöschen"/>
+        <Class IRI="#PersonenGruppe"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#GruppenVerwalten"/>
+        <Class IRI="#PersonenGruppe"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#GruppeÄndern"/>
+        <Class IRI="#PersonenGruppe"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#MedienVerwalten"/>
+        <Class IRI="#Medium"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#MediumAusleihen"/>
+        <Class IRI="#Medium"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#MediumBearbeiten"/>
+        <Class IRI="#Medium"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#MediumHinzufügen"/>
+        <Class IRI="#Medium"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#MediumLöschen"/>
+        <Class IRI="#Medium"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#MediumVorbestellen"/>
+        <Class IRI="#Medium"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#MediumZurückgeben"/>
+        <Class IRI="#Medium"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#NutzerBearbeiten"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#NutzerErstellen"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#NutzerInGruppenEingliedern"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#NutzerLöschen"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#SucheAusführen"/>
+        <Class IRI="#Medium"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#SucheÜberInhaltAusführen"/>
+        <Class IRI="#Medium"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#SucheÜberMetadatenAusführen"/>
+        <Class IRI="#Medium"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#automatischeMahnungVerschickenAn"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#automatischeWarnungVerschickenAn"/>
+        <Class IRI="#Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#gehörtZuGruppe"/>
+        <Class IRI="#PersonenGruppe"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hatAusgeliehen"/>
+        <Class IRI="#PhysischesMedium"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#physischesMediumEntspricht"/>
+        <Class IRI="#Medium"/>
+    </ObjectPropertyRange>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#MediumAusleihen"/>
+        <ObjectProperty IRI="#MediumVorbestellen"/>
+    </DisjointObjectProperties>
+    <DisjointObjectProperties>
+        <ObjectProperty IRI="#gehörtZuGruppe"/>
+        <ObjectProperty IRI="#überUserInterfaceVerwalten"/>
+    </DisjointObjectProperties>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#kannPersonHinzufügen"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hatAusleihdatum"/>
+        <Class IRI="#PhysischesMedium"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hatAusleihzeitpunkt"/>
+        <Class IRI="#Medium"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hatIdentifier"/>
+        <Class IRI="#Medium"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hatRückgabedatum"/>
+        <Class IRI="#PhysischesMedium"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hatStückzahl"/>
+        <Class IRI="#Medium"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#kannGruppeHinzufügen"/>
+        <Class IRI="#PersonenGruppe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#kannGruppeLöschen"/>
+        <Class IRI="#PersonenGruppe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#kannGruppeÄndern"/>
+        <Class IRI="#PersonenGruppe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#kannMediumHinzufügen"/>
+        <Class IRI="#PersonenGruppe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#kannMediumLöschen"/>
+        <Class IRI="#PersonenGruppe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#kannMediumÄndern"/>
+        <Class IRI="#PersonenGruppe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#kannPersonHinzufügen"/>
+        <Class IRI="#PersonenGruppe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#kannPersonLöschen"/>
+        <Class IRI="#PersonenGruppe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#kannPersonZuGruppeHinzufügen"/>
+        <Class IRI="#PersonenGruppe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#kannPersonÄndern"/>
+        <Class IRI="#PersonenGruppe"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#wurdenVerliehen"/>
+        <Class IRI="#Medium"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#wurdenVorbestellt"/>
+        <Class IRI="#Medium"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hatAusleihLevel"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hatAusleihdatum"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hatAusleihzeitpunkt"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hatIdentifier"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hatRückgabedatum"/>
+        <Datatype abbreviatedIRI="xsd:dateTime"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hatStückzahl"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#kannGruppeHinzufügen"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#kannGruppeLöschen"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#kannGruppeÄndern"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#kannMediumHinzufügen"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#kannMediumLöschen"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#kannMediumÄndern"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#kannPersonHinzufügen"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#kannPersonLöschen"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#kannPersonZuGruppeHinzufügen"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#kannPersonÄndern"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#wurdenVerliehen"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#wurdenVorbestellt"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AdministrationAusführen</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">In den untergeordneten Properties werden administrative relationen beschrieben. Die in der Domain durch Data Properties beschriebene Gruppe kann die in der Range beschriebene Klasse modifizieren.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AnderesMedium</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Andere Medien, die nicht in eine der vorgegebenen Kategorien passen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Medium</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Repräsentiert den Bestand eine Mediums im System</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MonitoringKomponente</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Eine Monitoringkomponente ist für den automatischen versand von Nachrichten zuständig.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Person</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Eine Person repräsentiert einen Nutzer im System.
+Sie gehört einer Gruppe an, wodurch ihre Rechte im System bestimmt werden.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PersonenGruppe</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Personengruppe repräsentiert eine Gruppe mitsamt ihren Rechten.
+Anhand der Data Properties werden die Rechte definiert.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PhysischesMedium</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Repräsentiert ein in der Bibliothek vorhandenes Medium. Im Falle eines digitalen Mediums würde das Rückgabedatum das Ende der Zugriffsberechtigung anzeigen.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hatAusleihLevel</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Referenz zu Ausleihrechten.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#hatIdentifier</IRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Identifikation. z.B. ISBN</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.2) http://owlapi.sourceforge.net -->
+
