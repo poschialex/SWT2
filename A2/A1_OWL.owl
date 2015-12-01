@@ -22,10 +22,7 @@
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
-        <Class IRI="#Admin_Rechte"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="#Ausleih_Rechte"/>
+        <Class IRI="#Admin"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Broschüren"/>
@@ -37,13 +34,19 @@
         <Class IRI="#Datenträger"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Katalog"/>
+        <Class IRI="#Medium"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Keine_Rechte"/>
+        <Class IRI="#Monitoring-Komponente"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Nutzer"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Personengruppen"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#System"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Zeitschriften"/>
@@ -55,52 +58,124 @@
         <Class IRI="#elektronische_Medien"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#mitVerspätungZurückgegeben"/>
+        <ObjectProperty IRI="#AdministrationAusführen"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#rechtzeitigZurückgegeben"/>
+        <ObjectProperty IRI="#AuskunftÜberMedienstatusGeben"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#wirdAusgeliehen"/>
+        <ObjectProperty IRI="#AusleiheVerlängern"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#wirdZurückgegeben"/>
+        <ObjectProperty IRI="#GruppeErstellen"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#GruppeLöschen"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#GruppenVerwalten"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#MedienVerwalten"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#MediendatenBearbeiten"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#MediumAusleihen"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#MediumHinzufügen"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#MediumLöschen"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#MediumVorbestellen"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#MediumZurückgeben"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#NutzerBearbeiten"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#NutzerErstellen"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#NutzerInGruppenEingliedern"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#NutzerLöschen"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#NutzerdatenBearbeiten"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#SucheAusführen"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#SucheÜberInhaltAusführen"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#SucheÜberMetadatenAusführen"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#automatischeMahnungVerschicken"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#automatischeWarnungVerschicken"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#überUserInterfaceVerwalten"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hatAusleihdauer"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hatStückzahl"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#istVerliehen"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#istVorbestellt"/>
     </Declaration>
     <SubClassOf>
-        <Class IRI="#Admin_Rechte"/>
-        <Class IRI="#Personengruppen"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Ausleih_Rechte"/>
+        <Class IRI="#Admin"/>
         <Class IRI="#Personengruppen"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Broschüren"/>
-        <Class IRI="#Katalog"/>
+        <Class IRI="#Medium"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Bücher"/>
-        <Class IRI="#Katalog"/>
+        <Class IRI="#Medium"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Datenträger"/>
-        <Class IRI="#Katalog"/>
+        <Class IRI="#Medium"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Keine_Rechte"/>
+        <Class IRI="#Monitoring-Komponente"/>
+        <Class IRI="#System"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nutzer"/>
         <Class IRI="#Personengruppen"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Zeitschriften"/>
-        <Class IRI="#Katalog"/>
+        <Class IRI="#Medium"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#andere_Medien"/>
-        <Class IRI="#Katalog"/>
+        <Class IRI="#Medium"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#elektronische_Medien"/>
-        <Class IRI="#Katalog"/>
+        <Class IRI="#Medium"/>
     </SubClassOf>
     <DisjointClasses>
         <Class IRI="#Broschüren"/>
@@ -111,21 +186,233 @@
         <Class IRI="#elektronische_Medien"/>
     </DisjointClasses>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#mitVerspätungZurückgegeben"/>
-        <ObjectProperty IRI="#wirdZurückgegeben"/>
+        <ObjectProperty IRI="#AdministrationAusführen"/>
+        <ObjectProperty IRI="#überUserInterfaceVerwalten"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#rechtzeitigZurückgegeben"/>
-        <ObjectProperty IRI="#wirdZurückgegeben"/>
+        <ObjectProperty IRI="#AuskunftÜberMedienstatusGeben"/>
+        <ObjectProperty IRI="#überUserInterfaceVerwalten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#AusleiheVerlängern"/>
+        <ObjectProperty IRI="#MediumAusleihen"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#GruppeErstellen"/>
+        <ObjectProperty IRI="#GruppenVerwalten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#GruppeLöschen"/>
+        <ObjectProperty IRI="#GruppenVerwalten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#GruppenVerwalten"/>
+        <ObjectProperty IRI="#AdministrationAusführen"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#MedienVerwalten"/>
+        <ObjectProperty IRI="#AdministrationAusführen"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#MediendatenBearbeiten"/>
+        <ObjectProperty IRI="#MedienVerwalten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#MediumAusleihen"/>
+        <ObjectProperty IRI="#überUserInterfaceVerwalten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#MediumHinzufügen"/>
+        <ObjectProperty IRI="#MedienVerwalten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#MediumLöschen"/>
+        <ObjectProperty IRI="#MedienVerwalten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#MediumVorbestellen"/>
+        <ObjectProperty IRI="#überUserInterfaceVerwalten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#MediumZurückgeben"/>
+        <ObjectProperty IRI="#überUserInterfaceVerwalten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#NutzerBearbeiten"/>
+        <ObjectProperty IRI="#NutzerdatenBearbeiten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#NutzerErstellen"/>
+        <ObjectProperty IRI="#NutzerdatenBearbeiten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#NutzerInGruppenEingliedern"/>
+        <ObjectProperty IRI="#GruppenVerwalten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#NutzerLöschen"/>
+        <ObjectProperty IRI="#NutzerdatenBearbeiten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#NutzerdatenBearbeiten"/>
+        <ObjectProperty IRI="#AdministrationAusführen"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#SucheAusführen"/>
+        <ObjectProperty IRI="#überUserInterfaceVerwalten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#SucheÜberInhaltAusführen"/>
+        <ObjectProperty IRI="#SucheAusführen"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#SucheÜberMetadatenAusführen"/>
+        <ObjectProperty IRI="#SucheAusführen"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#automatischeMahnungVerschicken"/>
+        <ObjectProperty IRI="#überUserInterfaceVerwalten"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#automatischeWarnungVerschicken"/>
+        <ObjectProperty IRI="#überUserInterfaceVerwalten"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
-        <ObjectProperty IRI="#wirdZurückgegeben"/>
-        <ObjectProperty IRI="#wirdAusgeliehen"/>
+        <ObjectProperty IRI="#MediumZurückgeben"/>
+        <ObjectProperty IRI="#MediumAusleihen"/>
     </InverseObjectProperties>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#AuskunftÜberMedienstatusGeben"/>
+        <Class IRI="#Monitoring-Komponente"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#AusleiheVerlängern"/>
+        <Class IRI="#Nutzer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#GruppenVerwalten"/>
+        <Class IRI="#Admin"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#MedienVerwalten"/>
+        <Class IRI="#Admin"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#MediumAusleihen"/>
+        <Class IRI="#Nutzer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#MediumZurückgeben"/>
+        <Class IRI="#Nutzer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#NutzerdatenBearbeiten"/>
+        <Class IRI="#Admin"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#SucheAusführen"/>
+        <Class IRI="#Nutzer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#SucheÜberInhaltAusführen"/>
+        <Class IRI="#Nutzer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#SucheÜberMetadatenAusführen"/>
+        <Class IRI="#Nutzer"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#automatischeMahnungVerschicken"/>
+        <Class IRI="#Monitoring-Komponente"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#automatischeWarnungVerschicken"/>
+        <Class IRI="#Monitoring-Komponente"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#AuskunftÜberMedienstatusGeben"/>
+        <Class IRI="#Nutzer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#AusleiheVerlängern"/>
+        <Class IRI="#Medium"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#GruppenVerwalten"/>
+        <Class IRI="#Nutzer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#MedienVerwalten"/>
+        <Class IRI="#Medium"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#MediumAusleihen"/>
+        <Class IRI="#Medium"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#MediumZurückgeben"/>
+        <Class IRI="#Medium"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#NutzerdatenBearbeiten"/>
+        <Class IRI="#Nutzer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#SucheAusführen"/>
+        <Class IRI="#Medium"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#SucheÜberInhaltAusführen"/>
+        <Class IRI="#Medium"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#SucheÜberMetadatenAusführen"/>
+        <Class IRI="#Medium"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#automatischeMahnungVerschicken"/>
+        <Class IRI="#Nutzer"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#automatischeWarnungVerschicken"/>
+        <Class IRI="#Nutzer"/>
+    </ObjectPropertyRange>
     <DisjointObjectProperties>
-        <ObjectProperty IRI="#mitVerspätungZurückgegeben"/>
-        <ObjectProperty IRI="#rechtzeitigZurückgegeben"/>
+        <ObjectProperty IRI="#MediumAusleihen"/>
+        <ObjectProperty IRI="#MediumVorbestellen"/>
     </DisjointObjectProperties>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hatAusleihdauer"/>
+        <Class IRI="#Medium"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#hatStückzahl"/>
+        <Class IRI="#Medium"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#istVerliehen"/>
+        <Class IRI="#Medium"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#istVorbestellt"/>
+        <Class IRI="#Medium"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#hatAusleihdauer"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#hatStückzahl"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#istVerliehen"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#istVorbestellt"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
 </Ontology>
 
 
