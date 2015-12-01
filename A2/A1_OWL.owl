@@ -136,10 +136,25 @@
         <DataProperty IRI="#hatStückzahl"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#istVerliehen"/>
+        <DataProperty IRI="#wurdenVerliehen"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#istVorbestellt"/>
+        <DataProperty IRI="#wurdenVorbestellt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Admin_XYZ"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Lehrbuch_A"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Lehrbuch_B"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Nutzer_123"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SWT_Paper.pdf"/>
     </Declaration>
     <SubClassOf>
         <Class IRI="#Admin"/>
@@ -185,6 +200,108 @@
         <Class IRI="#andere_Medien"/>
         <Class IRI="#elektronische_Medien"/>
     </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Admin"/>
+        <NamedIndividual IRI="#Admin_XYZ"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bücher"/>
+        <NamedIndividual IRI="#Lehrbuch_A"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bücher"/>
+        <NamedIndividual IRI="#Lehrbuch_B"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Nutzer"/>
+        <NamedIndividual IRI="#Nutzer_123"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#elektronische_Medien"/>
+        <NamedIndividual IRI="#SWT_Paper.pdf"/>
+    </ClassAssertion>
+    <DifferentIndividuals>
+        <NamedIndividual IRI="#Admin_XYZ"/>
+        <NamedIndividual IRI="#Lehrbuch_A"/>
+        <NamedIndividual IRI="#Lehrbuch_B"/>
+        <NamedIndividual IRI="#Nutzer_123"/>
+        <NamedIndividual IRI="#SWT_Paper.pdf"/>
+    </DifferentIndividuals>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MediendatenBearbeiten"/>
+        <NamedIndividual IRI="#Admin_XYZ"/>
+        <NamedIndividual IRI="#Lehrbuch_A"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MediumHinzufügen"/>
+        <NamedIndividual IRI="#Admin_XYZ"/>
+        <NamedIndividual IRI="#Lehrbuch_A"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MediumHinzufügen"/>
+        <NamedIndividual IRI="#Admin_XYZ"/>
+        <NamedIndividual IRI="#SWT_Paper.pdf"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#NutzerErstellen"/>
+        <NamedIndividual IRI="#Admin_XYZ"/>
+        <NamedIndividual IRI="#Nutzer_123"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#AusleiheVerlängern"/>
+        <NamedIndividual IRI="#Nutzer_123"/>
+        <NamedIndividual IRI="#Lehrbuch_A"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MediumAusleihen"/>
+        <NamedIndividual IRI="#Nutzer_123"/>
+        <NamedIndividual IRI="#Lehrbuch_A"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#MediumVorbestellen"/>
+        <NamedIndividual IRI="#Nutzer_123"/>
+        <NamedIndividual IRI="#Lehrbuch_B"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hatStückzahl"/>
+        <NamedIndividual IRI="#Lehrbuch_A"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">12</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#wurdenVerliehen"/>
+        <NamedIndividual IRI="#Lehrbuch_A"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">5</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#wurdenVorbestellt"/>
+        <NamedIndividual IRI="#Lehrbuch_A"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hatStückzahl"/>
+        <NamedIndividual IRI="#Lehrbuch_B"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#wurdenVerliehen"/>
+        <NamedIndividual IRI="#Lehrbuch_B"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#wurdenVorbestellt"/>
+        <NamedIndividual IRI="#Lehrbuch_B"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#hatStückzahl"/>
+        <NamedIndividual IRI="#SWT_Paper.pdf"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">1000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#wurdenVerliehen"/>
+        <NamedIndividual IRI="#SWT_Paper.pdf"/>
+        <Literal datatypeIRI="&rdf;PlainLiteral">10</Literal>
+    </DataPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#AdministrationAusführen"/>
         <ObjectProperty IRI="#überUserInterfaceVerwalten"/>
@@ -390,11 +507,11 @@
         <Class IRI="#Medium"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#istVerliehen"/>
+        <DataProperty IRI="#wurdenVerliehen"/>
         <Class IRI="#Medium"/>
     </DataPropertyDomain>
     <DataPropertyDomain>
-        <DataProperty IRI="#istVorbestellt"/>
+        <DataProperty IRI="#wurdenVorbestellt"/>
         <Class IRI="#Medium"/>
     </DataPropertyDomain>
     <DataPropertyRange>
@@ -406,12 +523,12 @@
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="#istVerliehen"/>
-        <Datatype abbreviatedIRI="xsd:boolean"/>
+        <DataProperty IRI="#wurdenVerliehen"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
     <DataPropertyRange>
-        <DataProperty IRI="#istVorbestellt"/>
-        <Datatype abbreviatedIRI="xsd:boolean"/>
+        <DataProperty IRI="#wurdenVorbestellt"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
 </Ontology>
 
