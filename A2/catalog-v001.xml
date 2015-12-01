@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1448968922280" name="http://education.state.mn.us/datadictionary/owl/education#" uri="Bsp/education.owl"/>
-        <uri id="Automatically generated entry, Timestamp=1448968922280" name="http://www.semanticweb.org/sara/ontologies/2015/10/untitled-ontology-4" uri="A1_OWL.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1449001799792" name="duplicate:http://www.semanticweb.org/sara/ontologies/2015/10/untitled-ontology-4" uri="A1_OWL.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1449001799792" name="duplicate:http://www.semanticweb.org/sara/ontologies/2015/10/untitled-ontology-4" uri="A2_OWL.owl"/>
     </group>
 </catalog>

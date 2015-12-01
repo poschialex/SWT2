@@ -136,9 +136,6 @@
         <ObjectProperty IRI="#hatAusgeliehen"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#kannAusleihen"/>
-    </Declaration>
-    <Declaration>
         <ObjectProperty IRI="#physischesMediumEntspricht"/>
     </Declaration>
     <Declaration>
@@ -336,7 +333,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#MediumBearbeiten"/>
         <NamedIndividual IRI="#Administratorengruppe"/>
-        <NamedIndividual IRI="#SWT_Paper.pdf"/>
+        <NamedIndividual IRI="#Lehrbuch_B"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#MediumBearbeiten"/>
@@ -346,12 +343,12 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#MediumBearbeiten"/>
         <NamedIndividual IRI="#Administratorengruppe"/>
-        <NamedIndividual IRI="#Lehrbuch_B"/>
+        <NamedIndividual IRI="#SWT_Paper.pdf"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#MediumHinzufügen"/>
         <NamedIndividual IRI="#Administratorengruppe"/>
-        <NamedIndividual IRI="#SWT_Paper.pdf"/>
+        <NamedIndividual IRI="#Lehrbuch_B"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#MediumHinzufügen"/>
@@ -361,12 +358,12 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#MediumHinzufügen"/>
         <NamedIndividual IRI="#Administratorengruppe"/>
-        <NamedIndividual IRI="#Lehrbuch_B"/>
+        <NamedIndividual IRI="#SWT_Paper.pdf"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#MediumLöschen"/>
         <NamedIndividual IRI="#Administratorengruppe"/>
-        <NamedIndividual IRI="#SWT_Paper.pdf"/>
+        <NamedIndividual IRI="#Lehrbuch_B"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#MediumLöschen"/>
@@ -376,7 +373,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#MediumLöschen"/>
         <NamedIndividual IRI="#Administratorengruppe"/>
-        <NamedIndividual IRI="#Lehrbuch_B"/>
+        <NamedIndividual IRI="#SWT_Paper.pdf"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#AusleiheVerlängern"/>
@@ -411,16 +408,11 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#AuskunftÜberMedienstatusGebenAn"/>
         <NamedIndividual IRI="#VerzugMonitor"/>
-        <NamedIndividual IRI="#Axel_Ausleihmann"/>
+        <NamedIndividual IRI="#Valentin_Vorbesteller"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#AuskunftÜberMedienstatusGebenAn"/>
         <NamedIndividual IRI="#VerzugMonitor"/>
-        <NamedIndividual IRI="#Valentin_Vorbesteller"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#automatischeMahnungVerschickenAn"/>
-        <NamedIndividual IRI="#VerzugMonitor"/>
         <NamedIndividual IRI="#Axel_Ausleihmann"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
@@ -429,7 +421,7 @@
         <NamedIndividual IRI="#Valentin_Vorbesteller"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#automatischeWarnungVerschickenAn"/>
+        <ObjectProperty IRI="#automatischeMahnungVerschickenAn"/>
         <NamedIndividual IRI="#VerzugMonitor"/>
         <NamedIndividual IRI="#Axel_Ausleihmann"/>
     </ObjectPropertyAssertion>
@@ -437,6 +429,11 @@
         <ObjectProperty IRI="#automatischeWarnungVerschickenAn"/>
         <NamedIndividual IRI="#VerzugMonitor"/>
         <NamedIndividual IRI="#Valentin_Vorbesteller"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#automatischeWarnungVerschickenAn"/>
+        <NamedIndividual IRI="#VerzugMonitor"/>
+        <NamedIndividual IRI="#Axel_Ausleihmann"/>
     </ObjectPropertyAssertion>
     <DataPropertyAssertion>
         <DataProperty IRI="#hatAusleihLevel"/>
@@ -671,6 +668,9 @@
         <ObjectProperty IRI="#MediumZurückgeben"/>
         <ObjectProperty IRI="#MediumAusleihen"/>
     </InverseObjectProperties>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#gehörtZuGruppe"/>
+    </FunctionalObjectProperty>
     <SymmetricObjectProperty>
         <ObjectProperty IRI="#physischesMediumEntspricht"/>
     </SymmetricObjectProperty>
