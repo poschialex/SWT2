@@ -1,0 +1,15 @@
+Mediendaten = Medieninformationen
+Medienänderungsdaten =[ Neumediendaten | Löschanfrage ]
+Medien austragen = Löschanfrage
+
+Mediumdaten = Medieninformationen
+Mediumausleihdaten = Ausleihdaten
+Suchdaten = Suchanfrage
+
+Nutzerdaten = Nutzerdaten
+Nutzeränderungdaten = [Neunutzerdaten | veränderte Nutzerdaten]
+
+Gruppendaten = Gruppeninformantionen
+Gruppenänderungsdaten = Neugruppendaten
+
+Warnung = Warnung
