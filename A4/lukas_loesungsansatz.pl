@@ -5,12 +5,29 @@ liste([H|T]) :- me(H, String), liste(T).
 
 
 eingeschriebenBAInf(studi). %Fact
-forall(Fach,pruefung(studi,Fach,3,1) :- Fach,me(Fach,Zeichen)). %Fact
+forall(Fach,pruefung(studi,Fach,3,1)). %Fact
+pruefung(studi, 1569691, 2, 1).
+inRegelstudienZeit(studi).
+abgegebeneErklärung(studi).
 
-bestanden(Person,Fach) :- Versuche < 3, Note < 5, pruefung(Person, Fach, Note, Versuche).
+inRegelstudienZeitPlusVier(Person) :- inRegelStudienZeit(Person).
 
-bachelorZugelassen(Person) :- forall(Fach,bestanden(Person,Fach)), eingeschriebenBAInf(Person).
-bachelorGeprueft(Person) :- bachlorZugelassen(Person).
+requires(1569726, 1569706). %SWT
+requires(1569889, 1569891). %TGI
+requires(1569889, 1569890).
+requires(1569756, 1569757). /*Datenbanken und Rechnernetze*/
+requires(1569756, 1569758).
+requires(1569847, 1569849). /*Mathe 1*/
+requires(1569848, 1569850). 
+requires(1569846, 1569847). %usw
+
+zugelassenZuPruefung(Person, Fach) :- requires(Fach, X), bestanden(Person, X).
+bestanden(Person,Fach) :- pruefung(Person, Fach, Note, Versuche), Versuche <= 3, Note < 5.
+nichtBestanden(Person,Fach) :- pruefung(Person, Fach, Note, Versuche), Versuche > 3.
+nichtBestanden(Person,Fach) :- pruefung(Person, Fach, Note, Versuche), Note >= 5.
+
+bachelorZugelassen(Person) :- forall(Fach,bestanden(Person,Fach)), eingeschriebenBAInf(Person), fachlicheErklärung(Person).
+bachelorGeprueft(Person) :- bachlorZugelassen(Person), inRegelstudienZeitPlusVier(Person).
 bsc(Person) :- bachelorGeprueft(Person).
 
 me(1569691,"INF-B-210 Algorithmen und Datenstrukturen").
