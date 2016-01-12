@@ -1,9 +1,6 @@
 member(X,[X|_]).
 member(X,[_|L]) :- member(X,L).
 
-liste([H|T]) :- me(H, String), liste(T).
-
-
 eingeschriebenBAInf(studi). %Fact
 forall(Fach,pruefung(studi,Fach,3,1)). %Fact
 pruefung(studi, 1569691, 2, 1).
@@ -22,11 +19,15 @@ requires(1569848, 1569850).
 requires(1569846, 1569847). %usw
 
 zugelassenZuPruefung(Person, Fach) :- requires(Fach, X), bestanden(Person, X).
-bestanden(Person,Fach) :- pruefung(Person, Fach, Note, Versuche), Versuche <= 3, Note < 5.
-nichtBestanden(Person,Fach) :- pruefung(Person, Fach, Note, Versuche), Versuche > 3.
-nichtBestanden(Person,Fach) :- pruefung(Person, Fach, Note, Versuche), Note >= 5.
+bestanden(Person,Fach) :- pruefung(Person, Fach, Note, Versuche), Versuche <= 3, Note <4.1.
+nichtBestanden(Person,Fach) :- pruefung(Person, Fach, Note, Versuche), Versuche > 3.0.
+nichtBestanden(Person,Fach) :- pruefung(Person, Fach, Note, Versuche), Note >= 4.1.
 
-bachelorZugelassen(Person) :- forall(Fach,bestanden(Person,Fach)), eingeschriebenBAInf(Person), fachlicheErklärung(Person).
+accZuVieleDrittversuche(Person,[H|Faecher],Zahl) :- pruefung(Person,H,Note,Versuche>=3.0), accZuVieleDrittversuche(Person,Faecher],Zahl - 1.0).
+accZuVieleDrittversuche(Person,[H|Faecher],Zahl) :- pruefung(Person,H,Note,Versuche<=3.0), accZuVieleDrittversuche(Person,Faecher,Zahl).
+accZuVieleDrittversuche(Person,[H|_],0).
+
+bachelorZugelassen(Person) :- forall(Fach,bestanden(Person,Fach)), eingeschriebenBAInf(Person), fachlicheErklärung(Person), not(accZuVieleDrittversuche(Person,liste,2)).
 bachelorGeprueft(Person) :- bachlorZugelassen(Person), inRegelstudienZeitPlusVier(Person).
 bsc(Person) :- bachelorGeprueft(Person).
 
@@ -68,5 +69,41 @@ me(1569900,"Bachelor Informatik 2009").
 me(2066555,"INF-B-510 Vertiefung").
 me(2066560,"INF-B-520 Vertiefung zur Bachelorarbeit").
  
-
+liste = [1569691,
+1569696,
+1569701,
+1569706,
+1569711,
+1569716,
+1569721,
+1569726,
+1569731,
+1569736,
+1569746,
+1569756,
+1569757,
+1569758,
+1569775,
+1569798,
+1569803,
+1569808,
+1569813,
+1569846,
+1569847,
+1569848,
+1569849,
+1569850,
+1569862,
+1569864,
+1569872,
+1569873,
+1569874,
+1569875,
+1569876,
+1569889,
+1569890,
+1569891,
+1569900,
+2066555,
+2066560]
 
