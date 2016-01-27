@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://axistest.mu" xmlns:apachesoap="http://xml.apache.org/xml-soap2" xmlns:impl="http://axistest.mu" xmlns:intf="http://axistest.mu" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on May 20, 2008 (05:12:03 CEST)-->
+ <wsdl:types>
+  <schema targetNamespace="http://axistest.mu" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://xml.apache.org/xml-soap2"/>
+   <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+   <complexType name="ArrayOfArrayOf_xsd_int">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:int[][]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="ArrayOf_xsd_anyType">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:anyType[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+  </schema>
+  <schema targetNamespace="http://xml.apache.org/xml-soap2" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://axistest.mu"/>
+   <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+   <complexType name="Vector">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="xsd:anyType"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="addResponse">
+
+      <wsdl:part name="addReturn" type="xsd:int"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="listSumRequest">
+
+      <wsdl:part name="list" type="impl:ArrayOf_xsd_anyType"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="subtractRequest">
+
+      <wsdl:part name="i1" type="xsd:int"/>
+
+      <wsdl:part name="i2" type="xsd:int"/>
+
+   </wsdl:message>
+
+  
+  
+  
+  
+  
+   <wsdl:portType name="Calculator">
+
+      <wsdl:operation name="add" parameterOrder="i1 i2">
+
+         <wsdl:input message="impl:addRequest" name="addRequest"/>
+
+         <wsdl:output message="impl:addResponse" name="addResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="subtract" parameterOrder="i1 i2">
+
+         <wsdl:input message="impl:subtractRequest" name="subtractRequest"/>
+
+         <wsdl:output message="impl:subtractResponse" name="subtractResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="matrixAdd" parameterOrder="m1 m2">
+
+         <wsdl:input message="impl:matrixAddRequest" name="matrixAddRequest"/>
+
+         <wsdl:output message="impl:matrixAddResponse" name="matrixAddResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="listSum" parameterOrder="list">
+
+         <wsdl:input message="impl:listSumRequest" name="listSumRequest"/>
+
+         <wsdl:output message="impl:listSumResponse" name="listSumResponse"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="calculatorSoapBinding" type="impl:Calculator">
+
+      <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http11"/>
+
+      <wsdl:operation name="add">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="addRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://axistest.mu" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="addResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://axistest.mu" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="subtract">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="subtractRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://axistest.mu" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="subtractResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://axistest.mu" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="matrixAdd">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="matrixAddRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://axistest.mu" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="matrixAddResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://axistest.mu" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="listSum">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="listSumRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://axistest.mu" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="listSumResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://axistest.mu" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="CalculatorService_Impl">
+
+      <wsdl:port binding="impl:calculatorSoapBinding" name="calculator">
+
+         <wsdlsoap:address location="http://localhost:8080/axis/services/calculator"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
