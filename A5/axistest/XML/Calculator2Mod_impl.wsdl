@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://axistest.mu" xmlns:apachesoap="http://xml.apache.org/xml-soap2" xmlns:impl="http://axistest.mu" xmlns:intf="http://axistest.mu" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on May 20, 2008 (05:12:03 CEST)-->
+ <wsdl:types>
+  <schema targetNamespace="http://axistest.mu" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://xml.apache.org/xml-soap2"/>
+   <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+   <complexType name="ArrayOfArrayOf_xsd_int">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:int[][]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+  </schema>
+  <schema targetNamespace="http://xml.apache.org/xml-soap2" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://axistest.mu"/>
+   <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+   <complexType name="mapItem">
+    <sequence>
+     <element name="key" nillable="true" type="xsd:anyType"/>
+     <element name="value" nillable="true" type="xsd:anyType"/>
+    </sequence>
+   </complexType>
+   <complexType name="Map">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="apachesoap:mapItem"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="textNumberResponse">
+
+      <wsdl:part name="textNumberReturn" type="soapenc:string"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="mapToRequest">
+
+      <wsdl:part name="map" type="apachesoap:Map"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="textNumberRequest">
+
+      <wsdl:part name="number" type="xsd:int"/>
+
+      <wsdl:part name="string" type="soapenc:string"/>
+
+   </wsdl:message>
+
+  
+  
+  
+   <wsdl:portType name="Calculator2">
+
+      <wsdl:operation name="matrixAdd" parameterOrder="m1 m2">
+
+         <wsdl:input message="impl:matrixAddRequest" name="matrixAddRequest"/>
+
+         <wsdl:output message="impl:matrixAddResponse" name="matrixAddResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="textNumber" parameterOrder="number string">
+
+         <wsdl:input message="impl:textNumberRequest" name="textNumberRequest"/>
+
+         <wsdl:output message="impl:textNumberResponse" name="textNumberResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="mapTo" parameterOrder="map">
+
+         <wsdl:input message="impl:mapToRequest" name="mapToRequest"/>
+
+         <wsdl:output message="impl:mapToResponse" name="mapToResponse"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="Calculator2SoapBinding" type="impl:Calculator2">
+
+      <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http11"/>
+
+      <wsdl:operation name="matrixAdd">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="matrixAddRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://axistest.mu" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="matrixAddResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://axistest.mu" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="textNumber">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="textNumberRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://axistest.mu" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="textNumberResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://axistest.mu" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="mapTo">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="mapToRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://axistest.mu" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="mapToResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://axistest.mu" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="Calculator2Service_Impl">
+
+      <wsdl:port binding="impl:Calculator2SoapBinding" name="Calculator2">
+
+         <wsdlsoap:address location="http://localhost:8080/axis/services/Calculator2"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

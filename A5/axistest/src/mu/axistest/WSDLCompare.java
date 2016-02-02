@@ -1,6 +1,7 @@
 package mu.axistest;
 
 import java.io.File;
+import static org.junit.Assert.assertEquals;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,9 +17,12 @@ import org.xmlunit.diff.ElementSelectors;
 import org.xmlunit.matchers.CompareMatcher;
 
 public class WSDLCompare {
-	public static void main(String[] args) {
-		File f1 = new File("XML//calculatorOff.wsdl");
-		File f2 = new File("XML//calculatorMod.wsdl");
+	public List<Difference> compareXML (String name1, String name2, boolean showDifferences ) {
+		//String name1 = "XML//calculatorOff.wsdl";
+		//String name2 = "XML//calculatorMod_impl.wsdl";
+		//boolean showDifferences = true;
+		File f1 = new File(name1); //"XML//calculatorOff.wsdl"
+		File f2 = new File(name2); //"XML//calculatorMod_impl.wsdl"
 		Source xml1 = Input.fromFile(f1).build();
 		Source xml2 = Input.fromFile(f2).build();
 		Diff myDiff = DiffBuilder.compare(xml1)
@@ -33,11 +37,13 @@ public class WSDLCompare {
 	        list.add(item);
 	    }
 		
-	    for(Difference d:list) {
-	    	System.out.println(d.toString());
+	    if(showDifferences) {
+	    	for(Difference d:list) {
+		    	//System.out.println(d.toString(new SWTXMLComparisonFormatter()));
+		    	System.out.println(d.toString());
+		    }
 	    }
-		//while(differences.iterator().hasNext()) {
-		//    System.out.println((differences.iterator().next().toString()));
-		//}
+	   return list;
+
 	}
 }

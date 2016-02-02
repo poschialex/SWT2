@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://axistest.mu" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://axistest.mu" xmlns:intf="http://axistest.mu" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema targetNamespace="http://axistest.mu" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://xml.apache.org/xml-soap"/>
+   <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+   <complexType name="ArrayOf_xsd_anyType">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:anyType[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+   <complexType name="TestClassReturn">
+    <sequence>
+     <element name="col" nillable="true" type="impl:ArrayOf_xsd_anyType"/>
+     <element name="name" nillable="true" type="soapenc:string"/>
+     <element name="number" type="xsd:int"/>
+    </sequence>
+   </complexType>
+  </schema>
+  <schema targetNamespace="http://xml.apache.org/xml-soap" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://axistest.mu"/>
+   <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+   <complexType name="Vector">
+    <sequence>
+     <element maxOccurs="unbounded" minOccurs="0" name="item" type="xsd:anyType"/>
+    </sequence>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="doSomethingRequest">
+
+      <wsdl:part name="name" type="soapenc:string"/>
+
+      <wsdl:part name="number" type="soapenc:int"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="doSomethingResponse">
+
+      <wsdl:part name="doSomethingReturn" type="impl:TestClassReturn"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="Calculator3">
+
+      <wsdl:operation name="doSomething" parameterOrder="name number">
+
+         <wsdl:input message="impl:doSomethingRequest" name="doSomethingRequest"/>
+
+         <wsdl:output message="impl:doSomethingResponse" name="doSomethingResponse"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="Calculator3SoapBinding" type="impl:Calculator3">
+
+      <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="doSomething">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="doSomethingRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://axistest.mu" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="doSomethingResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://axistest.mu" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="Calculator3Service">
+
+      <wsdl:port binding="impl:Calculator3SoapBinding" name="Calculator3">
+
+         <wsdlsoap:address location="http://localhost:8080/axis/services/Calculator3"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

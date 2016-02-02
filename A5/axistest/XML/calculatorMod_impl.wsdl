@@ -6,13 +6,6 @@ Built on May 20, 2008 (05:12:03 CEST)-->
   <schema targetNamespace="http://axistest.mu" xmlns="http://www.w3.org/2001/XMLSchema">
    <import namespace="http://xml.apache.org/xml-soap2"/>
    <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
-   <complexType name="ArrayOfArrayOf_xsd_int">
-    <complexContent>
-     <restriction base="soapenc:Array">
-      <attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:int[][]"/>
-     </restriction>
-    </complexContent>
-   </complexType>
    <complexType name="ArrayOf_xsd_anyType">
     <complexContent>
      <restriction base="soapenc:Array">
@@ -55,8 +48,6 @@ Built on May 20, 2008 (05:12:03 CEST)-->
   
   
   
-  
-  
    <wsdl:portType name="Calculator">
 
       <wsdl:operation name="add" parameterOrder="i1 i2">
@@ -75,14 +66,6 @@ Built on May 20, 2008 (05:12:03 CEST)-->
 
       </wsdl:operation>
 
-      <wsdl:operation name="matrixAdd" parameterOrder="m1 m2">
-
-         <wsdl:input message="impl:matrixAddRequest" name="matrixAddRequest"/>
-
-         <wsdl:output message="impl:matrixAddResponse" name="matrixAddResponse"/>
-
-      </wsdl:operation>
-
       <wsdl:operation name="listSum" parameterOrder="list">
 
          <wsdl:input message="impl:listSumRequest" name="listSumRequest"/>
@@ -93,7 +76,7 @@ Built on May 20, 2008 (05:12:03 CEST)-->
 
    </wsdl:portType>
 
-   <wsdl:binding name="calculatorSoapBinding" type="impl:Calculator">
+   <wsdl:binding name="CalculatorSoapBinding" type="impl:Calculator">
 
       <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http11"/>
 
@@ -133,24 +116,6 @@ Built on May 20, 2008 (05:12:03 CEST)-->
 
       </wsdl:operation>
 
-      <wsdl:operation name="matrixAdd">
-
-         <wsdlsoap:operation soapAction=""/>
-
-         <wsdl:input name="matrixAddRequest">
-
-            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://axistest.mu" use="encoded"/>
-
-         </wsdl:input>
-
-         <wsdl:output name="matrixAddResponse">
-
-            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://axistest.mu" use="encoded"/>
-
-         </wsdl:output>
-
-      </wsdl:operation>
-
       <wsdl:operation name="listSum">
 
          <wsdlsoap:operation soapAction=""/>
@@ -173,9 +138,9 @@ Built on May 20, 2008 (05:12:03 CEST)-->
 
    <wsdl:service name="CalculatorService_Impl">
 
-      <wsdl:port binding="impl:calculatorSoapBinding" name="calculator">
+      <wsdl:port binding="impl:CalculatorSoapBinding" name="Calculator">
 
-         <wsdlsoap:address location="http://localhost:8080/axis/services/calculator"/>
+         <wsdlsoap:address location="http://localhost:8080/axis/services/Calculator"/>
 
       </wsdl:port>
 
